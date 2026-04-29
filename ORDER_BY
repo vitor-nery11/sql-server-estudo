@@ -1,0 +1,34 @@
+-- inciando estudo sobre ORDER BY
+
+
+-- etapa 1
+SELECT *
+FROM Person.Person
+ORDER BY  FirstName asc, LastName desc
+
+
+-- etapa 2 
+
+SELECT FirstName, LastName
+FROM Person.Person
+ORDER BY MiddleName asc 
+
+
+-- exercicio 
+--- Obter o Product id  dos 10 produtos mais caros cadastrados no sistema, listando do mais caro para o mais barato
+
+SELECT *
+FROM Production.ProductListPriceHistory
+
+SELECT TOP 10 ProductID
+FROM Production.ProductListPriceHistory
+ORDER BY ListPrice desc
+
+
+
+-- exercicio 2 
+-- Obter o nome e numero do produto dos produtos que tem o product id entre 1~4
+
+SELECT TOP 4 name,ProductNumber
+FROM Production.Product
+ORDER BY ProductID

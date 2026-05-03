@@ -1,0 +1,61 @@
+-- exercicios de fundamentos em sql
+
+-- 1. quantos produtos temos cadastrados que custam mais do que 1500 dolares?
+
+SELECT count(ListPrice)
+FROM ProductioN.Product
+WHERE ListPrice > 1500
+
+r = 50
+
+
+-- 2. quantas pessoas temos com o sobrenome que inicia com a letra 'P'?
+
+SELECT *
+FROM Person.Person
+WHERE LastName LIKE 'p%'
+
+r = 1187
+
+
+
+-- 3. Em quantas cidades unicas estão cadastradas nossos clientes?
+
+SELECT count(DISTINCT city)
+FROM Person.Address
+
+
+r = 575
+
+
+
+-- 4. Quais são as cidades unicas que temos cadastradas no nosso sistema?
+
+SELECT DISTINCT(City)
+FROM Person.Address
+
+SELECT count(DISTINCT city )
+FROM Person.Address
+
+R = 575
+
+
+-- 5. Quantos produtos vermelhos tem preço entre 500 e 1000 dolares?
+
+
+SELECT *
+FROM Production.Product
+
+SELECT count(*)
+FROM Production.Product
+WHERE color = 'red' and ListPrice BETWEEN 500 AND 1000 
+
+R= 11 
+
+-- 6. quantos produtos cadastrados tem o nome 'road' no nome deles?
+
+SELECT count(name)
+FROM Production.Product
+WHERE Name like '%road%'
+
+R= 103 

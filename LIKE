@@ -1,0 +1,19 @@
+-- aula sobre 'like' 
+
+
+-- porcentagem no final busca nomes com o inicio em 'ovi'
+SELECT *
+FROM Person.Person
+WHERE FirstName like 'ovi%'
+
+
+-- porcentagem na frente busca nomes com o final em 'to'
+SELECT *
+FROM Person.Person
+WHERE FirstName like '%to' 
+
+
+-- se não sabemos se o nome inicia ou termina com essa config usamos porcentagem dos dois lados para localizar 
+SELECT * 
+FROM Person.Person
+WHERE FirstName like '%essa%'

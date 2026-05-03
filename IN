@@ -1,0 +1,23 @@
+SELECT *
+FROM Production.Product 
+WHERE ListPrice between 1000 and 1500;
+
+SELECT *
+FROM HumanResources.Employee
+WHERE HireDate BETWEEN  '2009/01/01' and '2010'
+ORDER BY HireDate
+
+
+
+-- exemplo utilizando o 'in' e  exemplo sem 'in' 
+SELECT * 
+FROM Person.Person
+WHERE BusinessEntityID IN (2,7,13)
+
+SELECT *
+FROM Person.Person
+WHERE BusinessEntityID = 2
+	OR BusinessEntityID = 7
+	OR BusinessEntityID = 13
+
+
